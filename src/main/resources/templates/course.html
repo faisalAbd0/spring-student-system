@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Course List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h1>Course List</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Course Name</th>
+        <th>Course Limit</th>
+        <th>Enrolled Students</th>
+        <th>Instructors</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="course : ${courses}">
+        <td th:text="${course.id}"></td>
+        <td th:text="${course.courseName}"></td>
+        <td th:text="${course.courseLimit}"></td>
+        <td>
+            <ul>
+                <li th:each="enrollment : ${course.studentCourseEnrollments}"
+                    th:text="${enrollment.student.username}"></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li th:each="enrollment : ${course.instructorCourseEnrollments}"
+                    th:text="${enrollment.instructor.username}"></li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

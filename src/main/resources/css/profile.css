@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.profile-container {
+    max-width: 600px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.profile-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.info-row {
+    margin: 8px 0;
+}
+.info-label {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+}
+.nav-links {
+    margin-top: 20px;
+}
+.nav-links a {
+    margin-right: 10px;
+}
+/*<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/table.css">*/

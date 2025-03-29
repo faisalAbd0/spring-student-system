@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+<%--    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/form.css">--%>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
+</head>
+<body>
+<h2>Welcome To The Login Page</h2>
+<h3>${errorMessage}</h3>
+<form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <label for="userType">User Type:</label>
+    <select id="userType" name="userType" required>
+        <option value="">-- Select User Type --</option>
+        <option value="student">Student</option>
+        <option value="instructor">Instructor</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <input type="submit" value="Login" />
+</form>
+
+</body>
+</html>
